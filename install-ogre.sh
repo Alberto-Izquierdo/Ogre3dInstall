@@ -5,7 +5,7 @@ apt-get install cmake build-essential libiconv-hook-dev libfribidi-dev libpcre3-
 hg clone https://bitbucket.org/cegui/cegui
 hg clone https://bitbucket.org/cegui/ceed
 cd ceed && hg update v0-8
-cd ../cegui && hg update v0-8
+cd ../cegui && hg update v0-8 && hg checkout 75b9fcc4e3cb
 mkdir build && cd build
 cmake -DCEGUI_BUILD_PYTHON_MODULES=ON -DCEGUI_BUILD_RENDERER_OPENGL=ON -DCEGUI_BUILD_RENDERER_OPENGL3=ON ../ 
 make -j$(nproc)
